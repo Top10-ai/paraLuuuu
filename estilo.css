@@ -1,0 +1,64 @@
+body {
+            font-family: "Valentine", Arial;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-size: 30px;
+            position: relative;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 60vw;
+            margin-top: 20px;
+        }
+        .photo-box {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .photo-box img {
+            width: 100%;
+            border-radius: 10px;
+            outline: 3px solid #ffc5c5;
+        }
+        .photo-box p {
+            color: #e60073;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .floating-text {
+            position: absolute;
+            font-size: 2em;
+            color: rgba(230, 0, 115, 0.5);
+            font-weight: bold;
+            animation: floatText 5s linear infinite;
+        }
+        @keyframes floatText {
+            from {
+                transform: translateY(100vh) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-10vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+img{
+    width: 200px;
+    height: 350px;
+}
